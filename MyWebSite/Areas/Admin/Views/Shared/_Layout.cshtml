@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Av. Nurselenay ZENGİN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyWebSite.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <section id="header" class="bg-light">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a asp-controller="Home" asp-action="Index"><img src="/img/N. ZENGİN.png" class="firmLogo" alt="Zengin Hukuk ve Danışmanlık" /></a>
+            <div>
+                <ul id="navbar" class="mb-0 ">
+                    <li><a class="active" asp-controller="Home" asp-action="Index">Anasayfa</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#practiseArea">Hizmetlerimiz</a></li>
+                    <li><a asp-controller="Blog" asp-action="Index">Blog</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                    <li id="lg-bag"><a href="cart.html"></a></li>
+                    <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <i id="bar" class="fa-sharp fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </section>
+
+    <div>
+        @RenderBody()
+
+    </div>
+
+    <footer id="contact" class="d-flex flex-row flex-wrap align-items-center justify-content-center shadow mt-4 bg-light">
+        <div class="container">
+            <div class="row mt-1">
+                <div class="col .col-xs-6 .col-md-4 m-3">
+                    <h5 class="text-center" style="color:#F0B823;">Adres</h5>
+                    <p class="text-dark text-center">Eti Mah. Toros Sk. No:13/9 <span class="text-dark text-center"><br />Sıhhiye-Çankaya/Ankara</span></p>
+                </div>
+                <div class="col .col-xs-6 .col-md-4 m-3">
+                    <h5 class="text-center" style="color:#F0B823;">İletişim</h5>
+                    <p class="text-dark text-center">+905389781409 <br /> <span class="text-dark text-center">+905423815262</span></p>
+                </div>
+                <div class="col .col-xs-6 .col-md-4 m-3">
+                    <h5 class="text-center" style="color:#F0B823;">Mail</h5>
+                    <p class="text-dark text-center"><a href="mailto:av.nurselenayzengin@gmail.com" class="text-dark text-center">av.nurselenayzengin@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <iframe class="mt-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.5697260541006!2d32.8519611!3d39.9286442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fd8d7bd074f%3A0xab04339fd2b1773c!2sNurselenay%20Zengin%20Hukuk%20ve%20Dan%C4%B1%C5%9Fmanl%C4%B1k!5e0!3m2!1sen!2str!4v1676086947376!5m2!1sen!2str" style=" height:250px; width:100vw;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <span class="my-2">© 2023 Nurselenay Zengin Hukuk ve Danışmanlık.</span>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
