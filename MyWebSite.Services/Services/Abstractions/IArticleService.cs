@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyWebSite.Services.Services.Abstractions
+namespace MyWebSite.Service.Services.Abstractions
 {
     public interface IArticleService
     {

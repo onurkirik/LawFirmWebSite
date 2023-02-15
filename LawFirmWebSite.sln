@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebSite", "MyWebSite\MyWebSite.csproj", "{577B1F60-7E2F-4D09-BF6F-FB5BDD023F81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebSite.Web", "MyWebSite\MyWebSite.Web.csproj", "{577B1F60-7E2F-4D09-BF6F-FB5BDD023F81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebSite.Entity", "MyWebSite.Entity\MyWebSite.Entity.csproj", "{2B2F7BDB-1BB3-4995-BAC5-FBE7E615756E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebSite.Entity", "MyWebSite.Entity\MyWebSite.Entity.csproj", "{2B2F7BDB-1BB3-4995-BAC5-FBE7E615756E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebSite.DATA", "MyWebSite.DATA\MyWebSite.DATA.csproj", "{91A62E12-80D0-4DF1-B692-B29CBD8B845C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebSite.DATA", "MyWebSite.DATA\MyWebSite.DATA.csproj", "{91A62E12-80D0-4DF1-B692-B29CBD8B845C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebSite.Services", "MyWebSite.Services\MyWebSite.Services.csproj", "{5453DF97-E2B5-43DD-99CC-B9F6E0C1B5D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebSite.Service", "MyWebSite.Services\MyWebSite.Service.csproj", "{5453DF97-E2B5-43DD-99CC-B9F6E0C1B5D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebSite.Core", "MyWebSite.Core\MyWebSite.Core.csproj", "{1F3C5F85-E1CC-4CB4-8030-8BFF3D70C637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebSite.Core", "MyWebSite.Core\MyWebSite.Core.csproj", "{1F3C5F85-E1CC-4CB4-8030-8BFF3D70C637}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

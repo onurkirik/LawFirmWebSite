@@ -1,13 +1,13 @@
 ﻿using MyWebSite.DATA.UnitOfWorks;
 using MyWebSite.Entity.Entities;
-using MyWebSite.Services.Services.Abstractions;
+using MyWebSite.Service.Services.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyWebSite.Services.Services.Concrete
+namespace MyWebSite.Service.Services.Concrete
 {
     public class ArticleService : IArticleService
     {

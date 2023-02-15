@@ -1,9 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using MyWebSite.DATA.Context;
 using MyWebSite.DATA.Extensions;
+using MyWebSite.Service.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.LoadDataLayerExtension(builder.Configuration);
+builder.Services.LoadServiceLayerExtension();
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
