@@ -25,6 +25,7 @@ namespace MyWebSite.DATA.Mappings
                     ImageId = Guid.Parse("7DD728B5-EB76-4624-BC94-25E3B9C1BDE1"),
                     CreatedBy = "Admin Test",
                     CreatedDate = DateTime.Now,
+                    UserId = Guid.Parse("6A57D34C-0669-4BC7-B941-354E27DA91F6")
                 },
                 new Article
                 {
@@ -36,6 +37,7 @@ namespace MyWebSite.DATA.Mappings
                     ImageId = Guid.Parse("ABB2A50C-F530-4B5E-8342-67BC682B126E"),
                     CreatedBy = "Admin Test",
                     CreatedDate = DateTime.Now,
+                    UserId = Guid.Parse("B0311AF2-1EFC-4094-AA60-3145EFA32D57")
                 });
         }
     }

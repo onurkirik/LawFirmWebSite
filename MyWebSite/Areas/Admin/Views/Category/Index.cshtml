@@ -1,0 +1,57 @@
+﻿@model List<CategoryDto>
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">
+        <span class="text-muted fw-light">Kategori Yönetimi /</span> Kategoriler
+    </h4>
+
+    <!-- Basic Bootstrap Table -->
+    <div class="card">
+        <div class="table-responsive text-nowrap">
+            <a asp-area="Admin" asp-controller="Category" asp-action="Add" class="btn btn-warning mb-4"><i class='bx bx-comment-add'></i> Kategori Ekle</a>
+            <table class="table" id="categoriesTable" width="100%" collspacing="0">
+                <thead>
+                    <tr>
+                        <th>Kategori Adı</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Oluşturan</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Kategori Adı</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Oluşturan</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </tfoot>
+                <tbody class="table-border-bottom-0">
+                    @foreach (var category in Model)
+                    {
+                        <tr name="@category.ID">
+                            <th>@category.Name</th>
+                            <th>@category.CreatedDate.ToShortDateString()</th>
+                            <th>@category.CreatedBy</th>
+                            <td>
+                                <a class="btn btn-primary btn-sm" data-id="@category.ID" asp-area="Admin" asp-controller="Category" asp-action="Update" asp-route-categoryId="@category.ID">
+                                    <i class='bx bxs-message-alt-edit'></i>
+                                </a>
+                                <a class="btn btn-danger btn-sm" data-id="@category.ID" asp-area="Admin" asp-controller="Category" asp-action="Delete" asp-route-categoryId="@category.ID">
+                                    <i class='bx bx-trash'></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--/ Basic Bootstrap Table -->
+
+
+
+</div>
+
+@section Scripts{
+    <script src="~/js/articleIndex.js" type="application/ecmascript"></script>
+}

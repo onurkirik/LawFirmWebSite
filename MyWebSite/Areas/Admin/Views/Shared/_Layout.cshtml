@@ -1,66 +1,189 @@
-﻿<!DOCTYPE html>
-<html lang="tr">
+﻿<html lang="tr" class="light-style layout-menu-fixed " dir="ltr" data-theme="theme-default" data-template="vertical-menhref=" u-template-free">
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Av. Nurselenay ZENGİN</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/MyWebSite.styles.css" asp-append-version="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Blog - Blog Yönetimi</title>
+
+    <meta name="description" content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
+    <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
+    <!-- Canonical SEO -->
+    <link rel="canonical" href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="~/sneat/assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="~/sneat/assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="~/sneat/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="~/sneat/assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="~/sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <link rel="stylesheet" href="~/sneat/assets/vendor/libs/apex-charts/apex-charts.css" />
+
+    <!-- Page CSS -->
+    <!-- Helpers -->
+    <script src="~/sneat/assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="~/sneat/assets/js/config.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <!-- Custom notification for demo -->
+    <!-- beautify ignore:end -->
+
 </head>
 <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar  ">
+        <div class="layout-container">
+            <!-- Menu -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="menu-inner-shadow"></div>
+                <ul class="menu-inner py-1">
 
-    <section id="header" class="bg-light">
-        <div class="container d-flex align-items-center justify-content-between">
-            <a asp-controller="Home" asp-action="Index"><img src="/img/N. ZENGİN.png" class="firmLogo" alt="Zengin Hukuk ve Danışmanlık" /></a>
-            <div>
-                <ul id="navbar" class="mb-0 ">
-                    <li><a class="active" asp-controller="Home" asp-action="Index">Anasayfa</a></li>
-                    <li><a href="#about">Hakkımızda</a></li>
-                    <li><a href="#practiseArea">Hizmetlerimiz</a></li>
-                    <li><a asp-controller="Blog" asp-action="Index">Blog</a></li>
-                    <li><a href="#contact">İletişim</a></li>
-                    <li id="lg-bag"><a href="cart.html"></a></li>
-                    <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
+                    <!-- Dashboard -->
+                    <li class="menu-item active mt-4">
+                        <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="menu-link">
+                            <i class='menu-icon bx bxs-dashboard'></i>
+                            <div data-i18n="Analytics">Gösterge Paneli</div>
+                        </a>
+                    </li>
+
+                    <!-- Layouts -->
+
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Sayfa Yönetimi</span>
+                    </li>
+                    <li class="menu-item">
+                        <a asp-area="Admin" asp-controller="Article" asp-action="Index" class="menu-link">
+                            <i class='menu-icon bx bx-paper-plane'></i>
+                            <div data-i18n="Analytics">Makale Yönetimi</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a asp-area="Admin" asp-controller="Category" asp-action="Index" class="menu-link">
+                            <i class='menu-icon bx bxs-category'></i>
+                            <div data-i18n="Analytics">Kategori Yönetimi</div>
+                        </a>
+                    </li>
                 </ul>
+            </aside>
+            <!-- / Menu -->
+            <!-- Layout container -->
+            <div class="layout-page">
+                <!-- Navbar -->
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
+                        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                            <i class="bx bx-menu bx-sm"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+                            <!-- User -->
+                            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                                    <div class="avatar avatar-online">
+                                        <img src="~/img/N. ZENGİN.png" class="w-px-40 h-auto rounded-circle">
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="avatar avatar-online">
+                                                        <img src="~/img/selenay foto.jpg" alt="avukat_nurselenay_zengin" class="w-px-40 h-auto rounded-circle">
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <span class="fw-semibold d-block">Nurselenay ZENGİN</span>
+                                                    <small class="text-muted">Admin</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Auth" asp-action="LogOut">
+                                            <i class="bx bx-power-off me-2"></i>
+                                            <span class="align-middle">Çıkış Yap</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--/ User -->
+                        </ul>
+                    </div>
+                </nav>
+                <!-- / Navbar -->
+                <!-- Content wrapper -->
+                @RenderBody()
+                <!-- Content wrapper -->
             </div>
-            <div id="mobile">
-                <i id="bar" class="fa-sharp fa-solid fa-bars"></i>
-            </div>
+            <!-- / Layout page -->
         </div>
-    </section>
-
-    <div>
-        @RenderBody()
-
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
     </div>
+    <!-- / Layout wrapper -->
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="~/sneat/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="~/sneat/assets/vendor/libs/popper/popper.js"></script>
+    <script src="~/sneat/assets/vendor/js/bootstrap.js"></script>
+    <script src="~/sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-    <footer id="contact" class="d-flex flex-row flex-wrap align-items-center justify-content-center shadow mt-4 bg-light">
-        <div class="container">
-            <div class="row mt-1">
-                <div class="col .col-xs-6 .col-md-4 m-3">
-                    <h5 class="text-center" style="color:#F0B823;">Adres</h5>
-                    <p class="text-dark text-center">Eti Mah. Toros Sk. No:13/9 <span class="text-dark text-center"><br />Sıhhiye-Çankaya/Ankara</span></p>
-                </div>
-                <div class="col .col-xs-6 .col-md-4 m-3">
-                    <h5 class="text-center" style="color:#F0B823;">İletişim</h5>
-                    <p class="text-dark text-center">+905389781409 <br /> <span class="text-dark text-center">+905423815262</span></p>
-                </div>
-                <div class="col .col-xs-6 .col-md-4 m-3">
-                    <h5 class="text-center" style="color:#F0B823;">Mail</h5>
-                    <p class="text-dark text-center"><a href="mailto:av.nurselenayzengin@gmail.com" class="text-dark text-center">av.nurselenayzengin@gmail.com</a>
-                </div>
-            </div>
-        </div>
+    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.bootstrap5.min.js" crossorigin="anonymous"></script>
 
-        <iframe class="mt-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.5697260541006!2d32.8519611!3d39.9286442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fd8d7bd074f%3A0xab04339fd2b1773c!2sNurselenay%20Zengin%20Hukuk%20ve%20Dan%C4%B1%C5%9Fmanl%C4%B1k!5e0!3m2!1sen!2str!4v1676086947376!5m2!1sen!2str" style=" height:250px; width:100vw;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <span class="my-2">© 2023 Nurselenay Zengin Hukuk ve Danışmanlık.</span>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+    <script src="~/sneat/assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+    <!-- Vendors JS -->
+    <script src="~/sneat/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <script src="~/sneat/assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="~/sneat/assets/js/dashboards-analytics.js"></script>
+
+    @await RenderSectionAsync("Scripts", false);
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
 </body>
+
 </html>

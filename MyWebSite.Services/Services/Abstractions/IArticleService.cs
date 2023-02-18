@@ -1,4 +1,5 @@
-﻿using MyWebSite.Entity.Entities;
+﻿using MyWebSite.Entity.DTOS.Articles;
+using MyWebSite.Entity.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,11 @@ namespace MyWebSite.Service.Services.Abstractions
 {
     public interface IArticleService
     {
-        Task<List<Article>> GetAllArticlesAsync();
+        Task<List<ArticleDto>> GetAllArticlesWithCategoryNonDeletedAsync();
+
+        Task<ArticleDto> GetArticleWithCategoryNonDeletedAsync(Guid articleId);
+        Task CreateArticleAsync(ArticleAddDto asticleAddDto);
+        Task UpdateArticleAsync(ArticleUpdateDto articleUpdatedto);
+        Task SafeDeleteArticleAsync(Guid articleId);
     }
 }

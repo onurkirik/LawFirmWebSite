@@ -1,0 +1,61 @@
+﻿@model List<ArticleDto>
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">
+        <span class="text-muted fw-light">Makale Yönetimi /</span> Makaleler
+    </h4>
+
+    <!-- Basic Bootstrap Table -->
+    <div class="card">
+        <div class="table-responsive text-nowrap">
+            <a asp-area="Admin" asp-controller="Article" asp-action="Add" class="btn btn-warning mb-4"><i class='bx bx-comment-add'></i> Makale Ekle</a>
+            <table class="table" id="articlesTable" width="100%" collspacing="0">
+                <thead>
+                    <tr>
+                        <th>Başlık</th>
+                        <th>Kategori</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Oluşturan</th>
+                        <th>Durum</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Başlık</th>
+                        <th>Kategori</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Oluşturan</th>
+                        <th>Durum</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </tfoot>
+                <tbody class="table-border-bottom-0">
+                    @foreach (var article in Model)
+                    {
+                        <tr name="@article.ID">
+                            <th>@article.Title</th>
+                            <th>@article.Category.Name</th>
+                            <th>@article.CreatedDate.ToShortDateString()</th>
+                            <th>@article.CreatedBy</th>
+                            <th>@(article.IsDeleted ? "Aktif Değil" : "Aktiftir")</th>
+                            <td>
+                                <a class="btn btn-primary btn-sm" data-id="@article.ID" asp-area="Admin" asp-controller="Article" asp-action="Update" asp-route-articleId="@article.ID">
+                                    <i class='bx bxs-message-alt-edit'></i>
+                                </a>
+                                <a class="btn btn-danger btn-sm" data-id="@article.ID" asp-area="Admin" asp-controller="Article" asp-action="Delete" asp-route-articleId="@article.ID">
+                                    <i class='bx bx-trash'></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--/ Basic Bootstrap Table -->
+
+</div>
+
+@section Scripts{
+    <script src="~/js/articleIndex.js" type="application/ecmascript"></script>
+}

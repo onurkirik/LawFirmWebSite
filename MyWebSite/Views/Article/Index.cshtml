@@ -1,0 +1,19 @@
+﻿@model List<ArticleDto>
+
+<section id="practiseArea" class="container mb-4">
+    <div class="d-flex flex-row flex-wrap align-items-center justify-content-center">
+        @foreach (var article in Model)
+        {
+            <div class="card .col-xs-6 .col-md-4 m-3 shadow" style="width: 16rem;">
+                <img src="~/img/articleImg/articleImg.jpg" class="card-img-top" alt="@article.Title">
+                <div class="card-body">
+                    <h5 class="card-title">@article.Title</h5>
+                    <p class="text-start">Hazırlayan: @article.CreatedBy</p>
+                    <p class="text-start">Tarihi: @article.CreatedDate.ToShortDateString()</p>
+                    <p class="text-start">Konusu: @article.Category.Name</p>
+                    <a class="btn btn-outline-dark float-end" data-id="@article.ID" asp-controller="Article" asp-action="ViewFullArticle" asp-route-articleId="@article.ID">Daha fazla...</a>
+                </div>
+            </div>
+        }
+    </div>
+</section>

@@ -1,0 +1,27 @@
+﻿@model CategoryUpdateDto
+
+<div class="container-xxl flex-grow-1 container-p-y">
+
+
+    <h4 class="fw-bold py-3 mb-4">
+        <span class="text-muted fw-light">Kategori Yönetimi /</span> Kategori Ekle
+    </h4>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <form asp-controller="Category" asp-action="Add" method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div>
+                            <label asp-for="Name" id="defaultFormcontrolInput" class="form-label">Kategori Adı</label>
+                            <input asp-for="Name" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Kategori adını giriniz." aria-describedby="defaultFormControlHelp" value="@Model.Name">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Kaydet</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
