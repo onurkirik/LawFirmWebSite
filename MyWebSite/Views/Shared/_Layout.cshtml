@@ -3,14 +3,40 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Başta Ankara, İstanbul, Samsun, Eskişehir, Konya gibi iller olmak üzere ülke sınırları içerisinde hukuki danışmanlık ve hukuk hizmeti vermekteyiz. Tüm davalarda hizmet vermekteyiz. Başlıca baktığımız davalar Ceza-Ağır Ceza davaları, Boşanma Davaları Aile Hukuku gibi alanlardır. Bize Ankara'da bulunan büromuzda mesai saatleri içerisinde ulaşabilirsiniz. Google haritalara Nurselanay ZENGİN hukuk ve danışmanlık merkezi yazdığınızda büromuza ulaşabilirsiniz ya da web sitemizdeki iletişim kısmından bizlere ulaşabilirsiniz." />
-    <meta name="keywords" content="Avukat Nurselenay ZENGİN"/>
-    <meta name="keywords" content="Ankara Avukat"/>
-    <meta name="keywords" content="Ankara ceza avukatı"/>
-    <meta name="keywords" content="Ankara boşanma avukatı"/>
-    <meta name="author" content="Onur KIRIK"/>
+    <meta name="description" content="Av. Nurselenay ZENGİN Hukuk ve Danışmanlık Merkezi olarak Ceza, Ağır Ceza, Boşanma ve Aile Hukuku davalarında danışmanlık ve hukuk hizmeti vermektedir." />
 
-    <title>@ViewData["Title"] - Av. Nurselenay ZENGİN</title>
+
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" key="og:title" content="Av. Nurselenay ZENGİN - Ceza, Ağır Ceza, Boşanma ve Aile Hukuku davaları danışmanlık ve hukuk hizmeti." />
+    <meta property="og:description"
+          key="og:description"
+          content="Av. Nurselenay ZENGİN Hukuk ve Danışmanlık Merkezi olarak Ceza, Ağır Ceza, Boşanma ve Aile Hukuku davalarında danışmanlık ve hukuk hizmeti vermektedir." />
+    <meta property="og:image"
+          key="og:image"
+          content="~/img/selenay foto.jpg" />
+    <meta property="og:url" key="og:url" content="https://av-nurselenay.azurewebsites.net/" />
+    <meta property="og:site_name" content="Av. Nurselenay ZENGİN Hukuk ve Danışmanlık" />
+    <meta name="twitter:card"
+          key="twitter:card"
+          content="summary_large_image" />
+    @*<meta name="twitter:site" key="twitter:site" content="@hypedotday" />
+    <meta name="twitter:image:alt"
+    content="Build HYPE for your Solana, Flow, Avalanche, Polygon, Klaytn and Ethereum projects, for free.
+    Hype.day is the easiest way to build high-quality access lists for your web3 project's mints, giveaways, and raffles. Check out a sample campaign or peep the feature set below." />*@
+    @*    <meta name="google-site-verification"
+    content="ny2b9ZZGw-bFdKNADDkL48U1nPCLrxrLrutRAxfoGA0"/>*@
+
+
+
+    @if (string.IsNullOrEmpty(ViewData["Title"]?.ToString()))
+    {
+        <title>Av. Nurselenay ZENGİN - Ceza, Ağır Ceza, Boşanma ve Aile Hukuku davaları danışmanlık ve hukuk hizmeti.</title>
+    }
+    else
+    {
+        <title>@ViewData["Title"] - Av. Nurselenay ZENGİN</title>
+    }
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
