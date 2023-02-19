@@ -3,20 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Av. Nurselenay ZENGİN Hukuk ve Danışmanlık Merkezi olarak Ceza, Ağır Ceza, Boşanma ve Aile Hukuku davalarında danışmanlık ve hukuk hizmeti vermektedir." />
+    <meta name="description" content="@(ViewData["Description"]==null? "Ceza, Ağır Ceza, Boşanma ve Aile Hukuku davalarında danışmanlık ve hukuk hizmeti vermekteyiz." : ViewData["Description"])" />
 
 
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" key="og:title" content="Av. Nurselenay ZENGİN - Ceza, Ağır Ceza, Boşanma ve Aile Hukuku davaları danışmanlık ve hukuk hizmeti." />
+    <meta property="og:title" key="og:title" content="@(ViewData["Title"]==null? string.Empty : $"{ViewData["Title"]} - ")Av. Nurselenay ZENGİN" />
     <meta property="og:description"
           key="og:description"
-          content="Av. Nurselenay ZENGİN Hukuk ve Danışmanlık Merkezi olarak Ceza, Ağır Ceza, Boşanma ve Aile Hukuku davalarında danışmanlık ve hukuk hizmeti vermektedir." />
+          content="@(ViewData["Description"]==null? "Ceza, Ağır Ceza, Boşanma ve Aile Hukuku davalarında danışmanlık ve hukuk hizmeti vermekteyiz." : ViewData["Description"])" />
     <meta property="og:image"
           key="og:image"
           content="/img/selenay foto.jpg" />
     <meta property="og:url" key="og:url" content="https://av-nurselenay.azurewebsites.net/" />
-    <meta property="og:site_name" content="Av. Nurselenay ZENGİN Hukuk ve Danışmanlık" />
+    <meta property="og:site_name" content="@(ViewData["Title"]==null? string.Empty : $"{ViewData["Title"]} - ")Av. Nurselenay ZENGİN Hukuk ve Danışmanlık" />
     <meta name="twitter:card"
           key="twitter:card"
           content="summary_large_image" />
@@ -37,6 +37,8 @@
     {
         <title>@ViewData["Title"] - Av. Nurselenay ZENGİN</title>
     }
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />

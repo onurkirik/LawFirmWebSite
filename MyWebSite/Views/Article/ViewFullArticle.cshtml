@@ -1,6 +1,7 @@
 ﻿@model ArticleUpdateDto
 @{
     ViewBag.Title = Model.Title;
+    ViewBag.Description = Model.Content.Length < 160 ? Model.Content : Model.Content.Substring(0, 160);
 }
 
 <div class="container mt-4 mb-4">
