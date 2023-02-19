@@ -4,17 +4,20 @@
     ViewBag.Description = Model.Content.Length < 160 ? Model.Content : Model.Content.Substring(0, 160);
 }
 
-<div class="container mt-4 mb-4">
-    <div class="col-1 d-none d-md-flex"></div>
-    <div>
-        <img id="articleBgImage" src="~/img/articleImg/articleBackGround.jpg" />
-    </div>
-    <h1 class="text-center my-4 display-4">@Model.Title</h1>
-    <div class="d-flex flex-column-reverse flex-md-row" id="about">
-        <div class="col">
-            <p id="heroTitle" class="text-justify mt-4">
-                @Model.Content
-            </p>
+<article>
+    <div class="container mt-4 mb-4">
+        <div class="col-1 d-none d-md-flex"></div>
+        <div>
+            <img id="articleBgImage" src="~/img/articleImg/articleBackGround.jpg" />
+        </div>
+        <h1 class="text-center my-4 display-4">@Model.Title</h1>
+        <div class="d-flex flex-column-reverse flex-md-row" id="about">
+            <div class="col">
+                <p class="text-justify mt-4">
+                    @Model.Content
+                </p>
+            </div>
         </div>
     </div>
-</div>
+</article>
+
