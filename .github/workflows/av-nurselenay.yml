@@ -10,13 +10,6 @@ env:
   DOTNET_CORE_VERSION: 6.0.x
   WORKING_DIRECTORY: MyWebSite
 jobs:
-  clean:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: kolpav/purge-artifacts-action@v1
-        with:
-          token: ${{github.token}}
-          expire-in: 0 # Set this to 0 to delete all artifacts
   build:
     runs-on: ubuntu-latest
     needs: clean
