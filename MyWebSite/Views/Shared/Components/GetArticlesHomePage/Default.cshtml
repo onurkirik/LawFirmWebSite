@@ -1,0 +1,30 @@
+﻿@model List<Article>
+
+@if (Model.Count() > 2)
+{
+    <section id="practiseArea" class="container mb-4">
+        <h1 class="display-4 text-center my-4">Güncel Makalelerimiz</h1>
+        <p class="text-center mb-4">
+            Güncel olarak yazılmış makalelerimize buradan ulaşabilirsiniz. Eğer isterseniz tüm makalelerimizi "Makaleler" kısmından inceleyebilirsiniz.
+        </p>
+        <div class="d-flex flex-row flex-wrap align-items-center justify-content-center">
+            @foreach (var article in Model)
+            {
+                <div class="card m-4 shadow" style="width: 25rem;">
+                    <div class="card-body shadow">
+                        <h5 class="card-title p-0">@article.Title</h5>
+                        @if (article.Content.Length < 80)
+                        {
+                            <p class="card-text p-0">@article.Content ...</p>
+                        }
+                        else
+                        {
+                            <p class="card-text p-0">@article.Content.Substring(0,80) ...</p>
+                        }
+                        <a asp-controller="Article" asp-action="ViewFullArticle" asp-route-articleId="@article.ID" class="card-link float-end p-0">Devamı</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+}

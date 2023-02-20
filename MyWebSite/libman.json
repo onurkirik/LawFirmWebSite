@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+
+  {
+  "provider": "cdnjs",
+  "library": "summernote@0.8.18",
+  "destination": "wwwroot/Admin/lib/summernote/"
+}
+]
+}

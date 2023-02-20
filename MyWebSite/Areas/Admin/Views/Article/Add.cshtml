@@ -23,9 +23,9 @@
                         </div>
                         <div>
                             <label asp-for="Content" for="defaultFormControlInput" class="form-label">İçerik</label>
-                            <textarea asp-for="Content" type="text" rows="15" class="form-control mb-3" id="defaultFormControlInput" placeholder="Makale içeriğini giriniz" aria-describedby="defaultFormControlHelp"></textarea>
+                            <textarea asp-for="Content" type="text" class="form-control mb-3" id="Content"></textarea>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mt-4">
                             <button type="submit" class="btn btn-primary btn-block">Kaydet</button>
                         </div>
                     </div>
@@ -35,3 +35,10 @@
     </div>
 </div>
 
+@section Scripts{
+    <script>
+        $("#Content").summernote({
+            height: 400
+        });
+    </script>
+}

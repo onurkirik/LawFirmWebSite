@@ -15,7 +15,11 @@ body {
     padding: 20px 80px;
 }
 
-#articleBgImage{
+#articles{
+    margin: 25px;
+}
+
+#articleBgImage {
     height: 25rem;
     width: 100%;
 }

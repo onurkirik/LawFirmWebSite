@@ -13,11 +13,12 @@
         <h1 class="text-center my-4 display-4">@Model.Title</h1>
         <div class="d-flex flex-column-reverse flex-md-row" id="about">
             <div class="col">
-                <p class="text-justify mt-4">
+                <div class="text-justify mt-4">
                     @Model.Content
-                </p>
+                </div>
             </div>
         </div>
     </div>
 </article>
 
+@await Component.InvokeAsync("SuggestArticle", new { articleId = Model.ID});
