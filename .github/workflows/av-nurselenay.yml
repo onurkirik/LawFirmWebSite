@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: kolpav/purge-artifacts-action@v1
         with:
-          token: $
+          token: ${{github.token}}
           expire-in: 0 # Set this to 0 to delete all artifacts
   build:
     runs-on: ubuntu-latest
