@@ -22,6 +22,10 @@
                             <input asp-for="Title" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Makale başlığını giriniz" aria-describedby="defaultFormControlHelp">
                         </div>
                         <div>
+                            <label asp-for="Description" for="defaultFormControlInput" class="form-label">İçerik</label>
+                            <textarea asp-for="Description" type="text" rows="4" class="form-control mb-3" ></textarea>
+                        </div>
+                        <div>
                             <label asp-for="Content" for="defaultFormControlInput" class="form-label">İçerik</label>
                             <textarea asp-for="Content" type="text" class="form-control mb-3" id="Content"></textarea>
                         </div>

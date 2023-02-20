@@ -1,28 +1,31 @@
 ﻿@model List<Article>
 
-
-<section id="practiseArea" class="container mb-4">
-    <h1 class="display-4 text-center my-4">Okurların İlgilendikleri</h1>
-    <p class="text-center mb-4">
-        Okumuş olduğunuz makaleyi inceleyen diğer okurlar aşağıdaki önerilerde bulunan makaleleri de incelemişlerdir. Tüm makalelerimize göz atmak için <a asp-controller="Article" asp-action="Index">buradan</a> ulaşabilir ya da başlık kısmında bulunan makaleler kısmına tıklayabilirsiniz.
-    </p>
-    <div class="d-flex flex-row flex-wrap align-items-center justify-content-center">
-        @foreach (var article in Model)
-        {
-            <div class="card m-4 shadow rounded-lg overflow-hidden" style="width: 25rem;">
-                <div class="card-body shadow">
-                    <h5 class="card-title p-0">@article.Title</h5>
-                    @if (article.Content.Length < 80)
-                    {
-                        <p class="card-text p-0">@article.Content ...</p>
-                    }
-                    else
-                    {
-                        <p class="card-text p-0">@article.Content.Substring(0,80) ...</p>
-                    }
-                    <a asp-controller="Article" asp-action="ViewFullArticle" asp-route-articleId="@article.ID" class="card-link float-end p-0">Devamı</a>
+@if (Model.Count() > 0)
+{
+    <section id="practiseArea" class="container mb-4">
+        <h1 class="display-4 text-center my-4">Okurların İlgilendikleri</h1>
+        <p class="text-center mb-4">
+            Okumuş olduğunuz makaleyi inceleyen diğer okurlar aşağıdaki önerilerde bulunan makaleleri de incelemişlerdir. Tüm makalelerimize göz atmak için <a asp-controller="Article" asp-action="Index">buradan</a> ulaşabilir ya da başlık kısmında bulunan makaleler kısmına tıklayabilirsiniz.
+        </p>
+        <div class="d-flex flex-row flex-wrap align-items-center justify-content-center">
+            @foreach (var article in Model)
+            {
+                <div class="card m-4 shadow rounded-lg overflow-hidden" style="width: 25rem;">
+                    <div class="card-body shadow">
+                        <h5 class="card-title p-0">@article.Title</h5>
+                        @if (article.Description.Length < 80)
+                        {
+                            <p class="card-text p-0">@article.Description ...</p>
+                        }
+                        else
+                        {
+                            <p class="card-text p-0">@article.Description.Substring(0,80) ...</p>
+                        }
+                        <a asp-controller="Article" asp-action="ViewFullArticle" asp-route-articleId="@article.ID" class="card-link float-end p-0">Devamı</a>
+                    </div>
                 </div>
-            </div>
-        }
-    </div>
-</section>
+            }
+        </div>
+    </section>
+
+}

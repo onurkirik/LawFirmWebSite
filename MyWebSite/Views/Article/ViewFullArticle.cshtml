@@ -1,7 +1,7 @@
 ﻿@model ArticleUpdateDto
 @{
     ViewBag.Title = Model.Title;
-    ViewBag.Description = Model.Content.Length < 160 ? Model.Content : Model.Content.Substring(0, 160);
+    ViewBag.Description = Model.Description.Length < 160 ? Model.Description : Model.Description.Substring(0, 160);
 }
 
 <article>
@@ -14,7 +14,7 @@
         <div class="d-flex flex-column-reverse flex-md-row" id="about">
             <div class="col">
                 <div class="text-justify mt-4">
-                    @Model.Content
+                    @Html.Raw(Model.Content)
                 </div>
             </div>
         </div>

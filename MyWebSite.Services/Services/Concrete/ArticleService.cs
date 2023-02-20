@@ -31,6 +31,7 @@ namespace MyWebSite.Service.Services.Concrete
                 Title = articleAddDto.Title,
                 Content = articleAddDto.Content,
                 CategoryId = articleAddDto.CategoryID,
+                Description = articleAddDto.Description,
                 UserId = userId
             };
 
@@ -67,7 +68,7 @@ namespace MyWebSite.Service.Services.Concrete
         {
             var article = await _unitOfWork.GetRepository<Article>().GetbyguidAsync(articleId);
 
-            
+
             await _unitOfWork.GetRepository<Article>().DeleteAsync(article);
             await _unitOfWork.SaveAsync();
         }
