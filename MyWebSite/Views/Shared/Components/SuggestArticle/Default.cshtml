@@ -9,7 +9,7 @@
     <div class="d-flex flex-row flex-wrap align-items-center justify-content-center">
         @foreach (var article in Model)
         {
-            <div class="card m-4 shadow" style="width: 25rem;">
+            <div class="card m-4 shadow rounded-lg overflow-hidden" style="width: 25rem;">
                 <div class="card-body shadow">
                     <h5 class="card-title p-0">@article.Title</h5>
                     @if (article.Content.Length < 80)

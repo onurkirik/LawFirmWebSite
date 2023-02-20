@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyWebSite.DATA.Context;
 
@@ -11,9 +12,10 @@ using MyWebSite.DATA.Context;
 namespace MyWebSite.DATA.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230220094934_contentDescription")]
+    partial class contentDescription
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,21 +55,21 @@ namespace MyWebSite.DATA.Migrations
                         new
                         {
                             Id = new Guid("f9d4c7a6-e007-44ef-87fd-06ea56ac2dbf"),
-                            ConcurrencyStamp = "f6e5935c-1b3d-4f86-9425-bf1c0675c0f9",
+                            ConcurrencyStamp = "5bd84060-2603-4313-b848-e36e01cb9d6d",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
                             Id = new Guid("8f7013ee-da4e-4940-b813-986416f4453d"),
-                            ConcurrencyStamp = "b3af2735-2a13-42a1-98ca-ee7e4c92fabe",
+                            ConcurrencyStamp = "f22a3023-6e46-4530-82e8-27c9203e4dc2",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = new Guid("9ed86dd8-29b5-49c9-98f8-c29216bd234b"),
-                            ConcurrencyStamp = "872dc66f-60a7-4d87-abf9-63d5cdc4963c",
+                            ConcurrencyStamp = "aef2e3db-159b-4f72-9d55-3caf605ce058",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -176,7 +178,7 @@ namespace MyWebSite.DATA.Migrations
                         {
                             Id = new Guid("6a57d34c-0669-4bc7-b941-354e27da91f6"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b6bbec62-c048-4e34-9746-76baa8cc3283",
+                            ConcurrencyStamp = "cfc59570-efe7-4176-a124-b2b4fd62403d",
                             Email = "av.nurselenayzengin@gmail.com",
                             EmailConfirmed = true,
                             FullName = "Nurselenay Zengin",
@@ -184,10 +186,10 @@ namespace MyWebSite.DATA.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "av.nurselenayzengin@gmail.com",
                             NormalizedUserName = "av.nurselenayzengin@gmail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAECbf77MBIgUABjG9rq8DOxZ4VzUkZDPeXQBFhyYgyFucXUbTsluR36uPbSm4bQqgEQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJMoYrxhDatgowihi7UlYXpcloVBD5oHS+GF/G7d0lI8PfI0CFSCow1k1DBt14mT7Q==",
                             PhoneNumber = "+905438888888",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "56c70792-a008-4491-8b48-f5d026645138",
+                            SecurityStamp = "21e0aa5c-8185-4ce6-b64a-151d241d46ee",
                             TwoFactorEnabled = false,
                             UserName = "av.nurselenayzengin@gmail.com"
                         },
@@ -195,7 +197,7 @@ namespace MyWebSite.DATA.Migrations
                         {
                             Id = new Guid("b0311af2-1efc-4094-aa60-3145efa32d57"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ce516b2c-36e5-4231-b9f1-2aaba76957ab",
+                            ConcurrencyStamp = "53c503cd-c1bf-4e18-862a-b4135fba323d",
                             Email = "admin@gmail.com",
                             EmailConfirmed = false,
                             FullName = "Admin User",
@@ -203,10 +205,10 @@ namespace MyWebSite.DATA.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFhalmrz2lye45DWhPtXW6P2x2LvsbUnhnjPDUjCeTAUGK6HnXNv2Sfe78jJTZ0w3Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECQ1EJDIEIfJNxPjNPk1XtmEH1UVJCQslVswvUViImtmwDo0O7GhWi0yp1iyHZW/UA==",
                             PhoneNumber = "+905438888899",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "edbb46ae-5225-4872-9dce-d27e6d87ffdf",
+                            SecurityStamp = "b8a1a0fb-7aba-4f1a-b1b7-d1422b71e74f",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         });
@@ -318,6 +320,9 @@ namespace MyWebSite.DATA.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ContentDescription")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -330,10 +335,6 @@ namespace MyWebSite.DATA.Migrations
 
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("ImageId")
                         .HasColumnType("uniqueidentifier");
@@ -450,7 +451,7 @@ namespace MyWebSite.DATA.Migrations
                         {
                             ID = new Guid("7dd728b5-eb76-4624-bc94-25e3b9c1bde1"),
                             CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 2, 20, 13, 42, 26, 992, DateTimeKind.Local).AddTicks(9862),
+                            CreatedDate = new DateTime(2023, 2, 20, 12, 49, 32, 403, DateTimeKind.Local).AddTicks(2881),
                             FileName = "images/testimage",
                             FileType = "jpg",
                             IsDeleted = false
@@ -459,7 +460,7 @@ namespace MyWebSite.DATA.Migrations
                         {
                             ID = new Guid("abb2a50c-f530-4b5e-8342-67bc682b126e"),
                             CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 2, 20, 13, 42, 26, 992, DateTimeKind.Local).AddTicks(9892),
+                            CreatedDate = new DateTime(2023, 2, 20, 12, 49, 32, 403, DateTimeKind.Local).AddTicks(2890),
                             FileName = "images/testimage",
                             FileType = "jpg",
                             IsDeleted = false

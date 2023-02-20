@@ -3,7 +3,7 @@
     <div class="d-flex flex-row flex-wrap align-items-center justify-content-center">
         @foreach (var article in Model)
         {
-            <div class="card .col-xs-6 .col-md-4 m-3 shadow" style="width: 16rem;">
+            <div class="card col-xs-6 col-md-4 m-3 shadow rounded-lg overflow-hidden" style="width: 16rem;">
                 <img src="~/img/articleImg/articleImg.jpg" class="card-img-top" alt="@article.Title">
                 <div class="card-body">
                     <h5 class="card-title">@article.Title</h5>

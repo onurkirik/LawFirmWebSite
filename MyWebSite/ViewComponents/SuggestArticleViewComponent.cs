@@ -21,13 +21,24 @@ namespace MyWebSite.Web.ViewComponents
             _mapper = mapper;
             _db = db;
         }
-        public async Task<IViewComponentResult> InvokeAsync(Guid articleId)
+        public async Task<IViewComponentResult> InvokeAsync(Guid? articleId = null)
         {
-            var articles = _db.Articles.OrderByDescending(a => a.CreatedDate).Where(a => a.ID != articleId).ToList();
-            listLength = articles.Count();
-            articles = articles.Take(listLength / 2).ToList();
+            if (articleId != null)
+            {
+                var articles = _db.Articles.OrderByDescending(a => a.CreatedDate).Where(a => a.ID != articleId).ToList();
+                listLength = articles.Count();
+                articles = articles.Take(listLength / 2).ToList();
 
-            return View(articles);
+                return View(articles);
+            }
+            else
+            {
+                var articles = _db.Articles.OrderByDescending(a => a.CreatedDate).ToList();
+                listLength = articles.Count();
+                articles = articles.Take(listLength / 2).ToList();
+
+                return View(articles);
+            }
         }
     }
 }
