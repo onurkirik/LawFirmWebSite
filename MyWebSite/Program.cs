@@ -1,3 +1,4 @@
+using AspNetCore.SEOHelper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MyWebSite.DATA.Context;
@@ -52,7 +53,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSession();
 
+
 app.UseRouting();
+
+app.UseRobotsTxt(builder.Environment.WebRootPath);
+app.UseXMLSitemap(builder.Environment.WebRootPath);
+
 app.UseAuthentication();
 app.UseAuthorization();
 

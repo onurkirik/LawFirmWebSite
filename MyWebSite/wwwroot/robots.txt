@@ -1,0 +1,23 @@
+# robots.txt for https://av-nurselenay.azurewebsites.net/
+
+User-agent: *
+Allow: * 	
+
+User-agent: Baiduspider
+Allow: *
+
+User-agent: HaoSouSpider
+Allow: *
+
+User-agent: Sogou web spider
+Allow: *
+
+User-agent: Sogou inst spider
+Allow: *
+
+User-agent: Sogou spider2
+Allow: *
+
+DaumWebMasterTool:fe46641ef2e4f3f25544ad9d70c6029df24dd184fad54154abaa3c263cf5a09a:DJh5xomiTcQ+2b1qsxHOUA==
+
+Sitemap: https://av-nurselenay.azurewebsites.net/sitemap.xml
