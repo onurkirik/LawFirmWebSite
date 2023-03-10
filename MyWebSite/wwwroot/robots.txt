@@ -18,6 +18,4 @@ Allow: *
 User-agent: Sogou spider2
 Allow: *
 
-DaumWebMasterTool:fe46641ef2e4f3f25544ad9d70c6029df24dd184fad54154abaa3c263cf5a09a:DJh5xomiTcQ+2b1qsxHOUA==
-
-Sitemap: https://nurselenayzengin.av.tr/sitemap.xml
+Sitemap: https://nurselenayzengin.av.tr/sitemap.xml 
