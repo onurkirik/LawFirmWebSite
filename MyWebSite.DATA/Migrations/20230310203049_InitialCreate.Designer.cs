@@ -12,8 +12,8 @@ using MyWebSite.DATA.Context;
 namespace MyWebSite.DATA.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230220094934_contentDescription")]
-    partial class contentDescription
+    [Migration("20230310203049_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,21 +55,21 @@ namespace MyWebSite.DATA.Migrations
                         new
                         {
                             Id = new Guid("f9d4c7a6-e007-44ef-87fd-06ea56ac2dbf"),
-                            ConcurrencyStamp = "5bd84060-2603-4313-b848-e36e01cb9d6d",
+                            ConcurrencyStamp = "cfeaea1a-088c-4bde-a3a0-1d711da9d1f5",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
                             Id = new Guid("8f7013ee-da4e-4940-b813-986416f4453d"),
-                            ConcurrencyStamp = "f22a3023-6e46-4530-82e8-27c9203e4dc2",
+                            ConcurrencyStamp = "b90b594c-30d4-43ab-8b1f-f5c2c1917cf7",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = new Guid("9ed86dd8-29b5-49c9-98f8-c29216bd234b"),
-                            ConcurrencyStamp = "aef2e3db-159b-4f72-9d55-3caf605ce058",
+                            ConcurrencyStamp = "479bb110-58ba-482b-9f70-b6014c08b567",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -178,18 +178,18 @@ namespace MyWebSite.DATA.Migrations
                         {
                             Id = new Guid("6a57d34c-0669-4bc7-b941-354e27da91f6"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "cfc59570-efe7-4176-a124-b2b4fd62403d",
+                            ConcurrencyStamp = "b58f2c3e-1a37-4a19-8108-528a5d367869",
                             Email = "av.nurselenayzengin@gmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             FullName = "Nurselenay Zengin",
                             ImageId = new Guid("7dd728b5-eb76-4624-bc94-25e3b9c1bde1"),
                             LockoutEnabled = false,
                             NormalizedEmail = "av.nurselenayzengin@gmail.com",
                             NormalizedUserName = "av.nurselenayzengin@gmail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJMoYrxhDatgowihi7UlYXpcloVBD5oHS+GF/G7d0lI8PfI0CFSCow1k1DBt14mT7Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELElAEMCCB8snzZytiQA8GWbouJnolmwYilzfOvhVVbxCxiTDrq4+bEwfn1Af+jh4g==",
                             PhoneNumber = "+905438888888",
-                            PhoneNumberConfirmed = true,
-                            SecurityStamp = "21e0aa5c-8185-4ce6-b64a-151d241d46ee",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "9f074ad7-065e-46fa-87e5-a81a8daec567",
                             TwoFactorEnabled = false,
                             UserName = "av.nurselenayzengin@gmail.com"
                         },
@@ -197,7 +197,7 @@ namespace MyWebSite.DATA.Migrations
                         {
                             Id = new Guid("b0311af2-1efc-4094-aa60-3145efa32d57"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "53c503cd-c1bf-4e18-862a-b4135fba323d",
+                            ConcurrencyStamp = "edfaa63d-224a-4342-975a-6a9fe9d13c63",
                             Email = "admin@gmail.com",
                             EmailConfirmed = false,
                             FullName = "Admin User",
@@ -205,10 +205,10 @@ namespace MyWebSite.DATA.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECQ1EJDIEIfJNxPjNPk1XtmEH1UVJCQslVswvUViImtmwDo0O7GhWi0yp1iyHZW/UA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELd3qo+hKFUHRI8FWKEY0K+BuFfqlF2GxXMiYrFzIx55w0y+ydaQXVzKgZLiRhLh3g==",
                             PhoneNumber = "+905438888899",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b8a1a0fb-7aba-4f1a-b1b7-d1422b71e74f",
+                            SecurityStamp = "2acdd5db-87c1-4db2-9a0d-adc635fa6976",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         });
@@ -320,9 +320,6 @@ namespace MyWebSite.DATA.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ContentDescription")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("CreatedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -335,6 +332,10 @@ namespace MyWebSite.DATA.Migrations
 
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("ImageId")
                         .HasColumnType("uniqueidentifier");
@@ -451,7 +452,7 @@ namespace MyWebSite.DATA.Migrations
                         {
                             ID = new Guid("7dd728b5-eb76-4624-bc94-25e3b9c1bde1"),
                             CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 2, 20, 12, 49, 32, 403, DateTimeKind.Local).AddTicks(2881),
+                            CreatedDate = new DateTime(2023, 3, 10, 23, 30, 48, 716, DateTimeKind.Local).AddTicks(7384),
                             FileName = "images/testimage",
                             FileType = "jpg",
                             IsDeleted = false
@@ -460,7 +461,7 @@ namespace MyWebSite.DATA.Migrations
                         {
                             ID = new Guid("abb2a50c-f530-4b5e-8342-67bc682b126e"),
                             CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 2, 20, 12, 49, 32, 403, DateTimeKind.Local).AddTicks(2890),
+                            CreatedDate = new DateTime(2023, 3, 10, 23, 30, 48, 716, DateTimeKind.Local).AddTicks(7398),
                             FileName = "images/testimage",
                             FileType = "jpg",
                             IsDeleted = false

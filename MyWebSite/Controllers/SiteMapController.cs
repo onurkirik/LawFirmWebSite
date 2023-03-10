@@ -24,21 +24,21 @@ namespace MyWebSite.Web.Controllers
             {
                 LastModified = DateTime.UtcNow,
                 Priority = 1,
-                Url = "https://av-nurselenay.azurewebsites.net",
+                Url = "https://nurselenayzengin.av.tr",
                 Frequency = SitemapFrequency.Daily
             });
             list.Add(new SitemapNode
             {
                 LastModified = DateTime.UtcNow,
                 Priority = 0.9,
-                Url = "https://av-nurselenay.azurewebsites.net/#practiseArea",
+                Url = "https://nurselenayzengin.av.tr/#practiseArea",
                 Frequency = SitemapFrequency.Daily
             });
             list.Add(new SitemapNode
             {
                 LastModified = DateTime.UtcNow,
                 Priority = 0.8,
-                Url = "https://av-nurselenay.azurewebsites.net/Article",
+                Url = "https://nurselenayzengin.av.tr/Article",
                 Frequency = SitemapFrequency.Daily
             });
 
@@ -50,7 +50,7 @@ namespace MyWebSite.Web.Controllers
                 {
                     LastModified = DateTime.UtcNow,
                     Priority = 0.8,
-                    Url = $"https://av-nurselenay.azurewebsites.net/Article/ViewFullArticle?articleId={article.ID}",
+                    Url = $"https://nurselenayzengin.av.tr/Article/ViewFullArticle?articleId={article.ID}",
                     Frequency = SitemapFrequency.Daily
                 });
             }

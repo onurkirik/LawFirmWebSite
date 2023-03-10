@@ -57,8 +57,8 @@ namespace MyWebSite.DATA.Mappings
                 NormalizedEmail = "av.nurselenayzengin@gmail.com",
                 PhoneNumber = "+905438888888",
                 FullName = "Nurselenay Zengin",
-                PhoneNumberConfirmed = true,
-                EmailConfirmed = true,
+                PhoneNumberConfirmed = false,
+                EmailConfirmed = false,
                 SecurityStamp = Guid.NewGuid().ToString(),
                 ImageId = Guid.Parse("7DD728B5-EB76-4624-BC94-25E3B9C1BDE1")
             };

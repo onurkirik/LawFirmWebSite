@@ -53,21 +53,21 @@ namespace MyWebSite.DATA.Migrations
                         new
                         {
                             Id = new Guid("f9d4c7a6-e007-44ef-87fd-06ea56ac2dbf"),
-                            ConcurrencyStamp = "f6e5935c-1b3d-4f86-9425-bf1c0675c0f9",
+                            ConcurrencyStamp = "cfeaea1a-088c-4bde-a3a0-1d711da9d1f5",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
                             Id = new Guid("8f7013ee-da4e-4940-b813-986416f4453d"),
-                            ConcurrencyStamp = "b3af2735-2a13-42a1-98ca-ee7e4c92fabe",
+                            ConcurrencyStamp = "b90b594c-30d4-43ab-8b1f-f5c2c1917cf7",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = new Guid("9ed86dd8-29b5-49c9-98f8-c29216bd234b"),
-                            ConcurrencyStamp = "872dc66f-60a7-4d87-abf9-63d5cdc4963c",
+                            ConcurrencyStamp = "479bb110-58ba-482b-9f70-b6014c08b567",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -176,18 +176,18 @@ namespace MyWebSite.DATA.Migrations
                         {
                             Id = new Guid("6a57d34c-0669-4bc7-b941-354e27da91f6"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b6bbec62-c048-4e34-9746-76baa8cc3283",
+                            ConcurrencyStamp = "b58f2c3e-1a37-4a19-8108-528a5d367869",
                             Email = "av.nurselenayzengin@gmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             FullName = "Nurselenay Zengin",
                             ImageId = new Guid("7dd728b5-eb76-4624-bc94-25e3b9c1bde1"),
                             LockoutEnabled = false,
                             NormalizedEmail = "av.nurselenayzengin@gmail.com",
                             NormalizedUserName = "av.nurselenayzengin@gmail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAECbf77MBIgUABjG9rq8DOxZ4VzUkZDPeXQBFhyYgyFucXUbTsluR36uPbSm4bQqgEQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELElAEMCCB8snzZytiQA8GWbouJnolmwYilzfOvhVVbxCxiTDrq4+bEwfn1Af+jh4g==",
                             PhoneNumber = "+905438888888",
-                            PhoneNumberConfirmed = true,
-                            SecurityStamp = "56c70792-a008-4491-8b48-f5d026645138",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "9f074ad7-065e-46fa-87e5-a81a8daec567",
                             TwoFactorEnabled = false,
                             UserName = "av.nurselenayzengin@gmail.com"
                         },
@@ -195,7 +195,7 @@ namespace MyWebSite.DATA.Migrations
                         {
                             Id = new Guid("b0311af2-1efc-4094-aa60-3145efa32d57"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ce516b2c-36e5-4231-b9f1-2aaba76957ab",
+                            ConcurrencyStamp = "edfaa63d-224a-4342-975a-6a9fe9d13c63",
                             Email = "admin@gmail.com",
                             EmailConfirmed = false,
                             FullName = "Admin User",
@@ -203,10 +203,10 @@ namespace MyWebSite.DATA.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFhalmrz2lye45DWhPtXW6P2x2LvsbUnhnjPDUjCeTAUGK6HnXNv2Sfe78jJTZ0w3Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELd3qo+hKFUHRI8FWKEY0K+BuFfqlF2GxXMiYrFzIx55w0y+ydaQXVzKgZLiRhLh3g==",
                             PhoneNumber = "+905438888899",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "edbb46ae-5225-4872-9dce-d27e6d87ffdf",
+                            SecurityStamp = "2acdd5db-87c1-4db2-9a0d-adc635fa6976",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         });
@@ -450,7 +450,7 @@ namespace MyWebSite.DATA.Migrations
                         {
                             ID = new Guid("7dd728b5-eb76-4624-bc94-25e3b9c1bde1"),
                             CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 2, 20, 13, 42, 26, 992, DateTimeKind.Local).AddTicks(9862),
+                            CreatedDate = new DateTime(2023, 3, 10, 23, 30, 48, 716, DateTimeKind.Local).AddTicks(7384),
                             FileName = "images/testimage",
                             FileType = "jpg",
                             IsDeleted = false
@@ -459,7 +459,7 @@ namespace MyWebSite.DATA.Migrations
                         {
                             ID = new Guid("abb2a50c-f530-4b5e-8342-67bc682b126e"),
                             CreatedBy = "Admin Test",
-                            CreatedDate = new DateTime(2023, 2, 20, 13, 42, 26, 992, DateTimeKind.Local).AddTicks(9892),
+                            CreatedDate = new DateTime(2023, 3, 10, 23, 30, 48, 716, DateTimeKind.Local).AddTicks(7398),
                             FileName = "images/testimage",
                             FileType = "jpg",
                             IsDeleted = false
