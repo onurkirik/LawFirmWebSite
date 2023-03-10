@@ -1,5 +1,6 @@
 ﻿using AspNetCore.SEOHelper.Sitemap;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.StaticFiles;
 using MyWebSite.Service.Services.Abstractions;
 using static System.Net.WebRequestMethods;
 
@@ -16,7 +17,7 @@ namespace MyWebSite.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Generate()
+        public async Task<IActionResult> Index()
         {
 
             var list = new List<SitemapNode>();
@@ -57,7 +58,12 @@ namespace MyWebSite.Web.Controllers
 
             new SitemapDocument().CreateSitemapXML(list, _env.WebRootPath);
 
-            return Ok();
+            var fileName = System.IO.Path.GetFileName($"{_env.WebRootPath}/sitemap.xml");
+            var content = await System.IO.File.ReadAllBytesAsync($"{_env.WebRootPath}/sitemap.xml");
+            new FileExtensionContentTypeProvider()
+                .TryGetContentType(fileName, out string contentType);
+            return File(content, contentType, fileName);
+
         }
     }
 }
